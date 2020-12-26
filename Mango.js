@@ -1,14 +1,16 @@
 class Mango{
-    constructor(x, y, width, height, angle) {
+    constructor(x, y) {
         var options = {
             isStatic:true,
             restitution:0,
             friction:1.0,
         }
-        this.body = Bodies.rectangle(x, y, width, height, options);
-        this.width = width;
-        this.height = height;
+        
+        this.width=80;
+        this.height=80;
         this.image = loadImage("images/mango.png");
+        this.body = Bodies.rectangle(x,y,80,80, options);
+       
         World.add(world, this.body);
       }
       display(){
